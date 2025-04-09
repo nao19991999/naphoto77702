@@ -1,0 +1,514 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --background-color: #fff3e0;
+    --accent-color: #5e93ff;
+    --color: #696969;
+}
+
+body {
+    /* font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif; */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+body h1 {
+    font-size: 2rem;
+}
+
+body h2 {
+    font-size: 1.7rem;
+}
+
+main h2 {
+    border-bottom: 3px solid var(--color);
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+body h3 {
+    font-size: 1.5rem;
+}
+
+/* *******************　スクロールアニメーションの画像調整　****** */
+
+header {
+    width: 100%;
+    height: 60vh;
+    background: url(/img/img02.jpg) no-repeat center / cover;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* コンテンツが重なる場合に必要 */
+}
+
+header .headerbox {
+    width: 100%;
+    height: auto;
+    background-color: hsla(210, 100%, 75%, 0.8);
+}
+
+header .navbox {
+    max-width: 1080px;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+header .headerbox nav ul {
+    display: flex;
+    gap: 2rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+header .title {
+    /* border: 3px solid #696969; */
+    display: flex;
+    flex-direction: column;
+    margin-block: auto;
+    margin-left: 3rem;
+    gap: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/*  *********************  nav button　design ******* */
+
+#drawerButton {
+    display: none;
+}
+
+h2 {
+    transition: all 0.5s linear;
+}
+
+.active {
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: rgb(196, 255, 237);
+    color: white;
+    transition: all 0.5s linear;
+}
+
+/* ************* header ************* */
+
+/* 　********************  main set ***************** */
+
+main {
+    max-width: 80%;
+    height: auto;
+    margin-top: 3rem;
+    background-color: var(background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+main section {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* 　********************  sec01 set  ***************** */
+
+main #sec01 .box011 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main #sec01 .box011 .item011 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+main #sec01 .box011 .item011 p {
+    max-width: 50%;
+    height: auto;
+}
+
+#sec01 .box011 .item011 dl {
+    display: flex;
+    flex-direction: column;
+}
+
+#sec01 .box011 .item011 dt {
+    font-weight: bold; /* 見出しを太字にする */
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+#sec01 .box011 .item011 dd {
+    margin-bottom: 1rem;
+}
+
+/*  ************** banner  action　************* */
+
+main #sec01 .banner {
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    background-color: bisque;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+main #sec01 .banner.active {
+    display: block;
+}
+
+main #sec01 .banner > p {
+    max-width: 80%;
+    margin-inline: auto;
+    font-size: 1.3rem;
+    color: #696969;
+    margin-bottom: 1rem;
+}
+main #sec01 .banner p:last-child {
+    font-size: 1rem;
+}
+
+main #sec01 .banner span {
+    max-width: 32px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    z-index: 100000;
+    cursor: pointer;
+}
+
+/*  ******************** sec 02 ************* */
+
+main #sec02 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+main #sec02 .box022 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+main #sec02 .regsec02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; /* center から stretch に変更 */
+    gap: 1rem;
+}
+
+main #sec02 .regsec02 .product {
+    flex-basis: calc((100% / 3) - (2rem / 3));
+    text-align: center;
+}
+
+main #sec02 .regsec02 .product-name {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1rem;
+}
+
+main #sec02 .regsec02 .img {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 幅と同じ高さ（正方形）を確保 */
+    overflow: hidden;
+}
+
+main #sec02 .regsec02 .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/*  ************************* sec03 ************** */
+
+#sec03 .box030 {
+    /* border: 3px solid #333; */
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#sec03 .box030 h2 {
+    /* background-color: #0056b3; */
+    margin-inline: auto;
+    margin-block: auto;
+}
+
+#sec03 .box031 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#sec03 .box032 .item031 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+#sec03 .box032 .item031 dl {
+    display: flex;
+    flex-basis: 40%;
+    flex-direction: column;
+    gap: 1rem;
+    align-content: center;
+}
+
+#sec03 .box032 .item031 dt {
+    font-weight: bold; /* 見出しを太字にする */
+    font-size: 20px;
+}
+
+#sec03 .box032 .item031 figure {
+    flex-basis: 40%;
+}
+
+#sec03 .box032 .item031 figure img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+/* /*****************************  sec04   *************************** */
+
+#sec04 {
+    max-width: 100%;
+}
+
+#sec04 .box040,
+.box041 {
+    max-width: 80%;
+    height: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#sec04 .box041 input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #696969;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 5px;
+    padding: 4px 8px;
+}
+
+#sec04 .box041 input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: baseline;
+    margin-right: 4px;
+}
+
+#sec04 .box041 textarea {
+    height: 130px;
+}
+
+#sec04 .box041 form > p {
+    width: 800px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+#sec04 .box041 input[type="submit"] {
+    background-color: #696969;
+    color: #ffffff;
+    padding: 18px 80px;
+}
+
+/*  *******************   footer ********* */
+
+footer {
+    max-width: 100%;
+    height: 100px;
+    margin-top: 3rem;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* ****************  loader  ************ */
+
+.loading-screen {
+    width: 100vh;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    transition: all 1s linear;
+    /* ここから下はデザイン用 */
+    background-color: #9eceff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(118, 118, 118);
+    /* transform: translate(-50%, -50%); */
+}
+
+/* JSで付与するクラス。これによってクラスloading_bgが指定されている要素が消える */
+/* top -100% つけることで上に消えていくデザインに変わる */
+.active {
+    opacity: 0;
+    visibility: hidden;
+    right: -100%;
+}
+
+.loader {
+    height: 27px;
+    aspect-ratio: 5;
+    --c: #000 90deg, #0000 0;
+    background: conic-gradient(from 135deg at top, var(--c)), conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+    background-size: 20% 50%;
+    background-repeat: repeat-x;
+    clip-path: inset(0 100% 0 0);
+    animation: l13-0 2.5s infinite steps(11, jump-none) alternate, l13-1 5s infinite steps(1);
+}
+@keyframes l13-0 {
+    to {
+        clip-path: inset(0);
+    }
+}
+@keyframes l13-1 {
+    50% {
+        scale: -1 1;
+    }
+}
+
+/*  *****************  スクロールアニメーション ********/
+
+.swiper {
+    margin-top: 2rem;
+    max-width: 1200px;
+    height: auto;
+}
+
+.swiper-slide img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+/* スライドの動き等速 */
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+/*  ******************  media start ************ */
+
+@media screen and (max-width: 768px) {
+    #drawerButton {
+        display: block;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1000;
+    }
+    .menu-container {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+        padding-left: 20px; /* アイコンを左に配置 */
+    }
+
+    /* メニューアイコンのスタイル */
+    .menu-icon {
+        cursor: pointer;
+        width: 30px; /* 幅 */
+        height: 30px; /* 高さ */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 各線のスタイル */
+    .line {
+        background-color: #333;
+        height: 4px;
+        width: 100%;
+        transition: all 0.3s ease;
+        margin-bottom: 4px;
+    }
+
+    /* メニューが開いたときのアニメーション */
+    #drawerButton.redesign .line1 {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    #drawerButton.redesign .line2 {
+        opacity: 0;
+    }
+
+    #drawerButton.redesign .line3 {
+        transform: rotate(-45deg);
+        position: relative;
+        bottom: 8px;
+    }
+
+    header nav ul {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: #9eceff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 800;
+        transition: all 0.3s linear;
+    }
+
+    header nav ul.open {
+        right: 0;
+        transition: all 0.3s linear;
+    }
+
+    header nav ul li {
+        font-size: 1rem;
+    }
+}
