@@ -40,7 +40,7 @@ body h3 {
 header {
     width: 100%;
     height: 60vh;
-    background: url(../img/img02.jpg) no-repeat center / cover;
+    background: url(/img/img02.jpg) no-repeat center / cover;
     display: flex;
     flex-direction: column;
     position: relative; /* コンテンツが重なる場合に必要 */
