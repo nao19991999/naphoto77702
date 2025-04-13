@@ -4,7 +4,7 @@ img {
 }
 
 :root {
-    --background-color: #fff3e0;
+    --background-color: #c6d9ff;
     --accent-color: #5e93ff;
     --color: #696969;
 }
@@ -15,8 +15,15 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
+    line-height: 1.7;
 }
 
+
+main{
+    max-width: 1080px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
 body h1 {
     font-size: 2rem;
 }
@@ -38,9 +45,9 @@ body h3 {
 /* *******************　スクロールアニメーションの画像調整　****** */
 
 header {
-    width: 100%;
+    max-width: 100%;
     height: 60vh;
-    background: url(img/img02.jpg) no-repeat center / cover;
+    background: url(../img/img02.jpg) no-repeat center / cover;
     display: flex;
     flex-direction: column;
     position: relative; /* コンテンツが重なる場合に必要 */
@@ -52,10 +59,8 @@ header .headerbox {
     background-color: hsla(210, 100%, 75%, 0.8);
 }
 
-header .navbox {
+header .headerbox .navbox {
     max-width: 1080px;
-    height: auto;
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,6 +70,7 @@ header .navbox {
 
 header .headerbox nav ul {
     display: flex;
+    padding: 1rem;
     gap: 2rem;
     color: #ffffff;
     font-size: 1.3rem;
@@ -73,15 +79,24 @@ header .headerbox nav ul {
 
 header .title {
     /* border: 3px solid #696969; */
+    width: 60%;
     display: flex;
     flex-direction: column;
     margin-block: auto;
     margin-left: 3rem;
     gap: 1rem;
-    color: #ffffff;
+    color: var(--color);
     font-weight: bold;
     line-height: 1.6;
+    text-shadow:
+    1px 0 white,
+    -1px 0 white,
+    0 1px white,
+    0 -1px white;
 }
+
+
+
 
 /*  *********************  nav button　design ******* */
 
@@ -106,10 +121,10 @@ h2 {
 /* 　********************  main set ***************** */
 
 main {
-    max-width: 80%;
+    max-width:1080px;
     height: auto;
     margin-top: 3rem;
-    background-color: var(background-color);
+    /* background-color: var(--background-color); */
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -138,10 +153,11 @@ main #sec01 .box011 .item011 {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 main #sec01 .box011 .item011 p {
-    max-width: 50%;
+    max-width: 450px;
     height: auto;
 }
 
@@ -223,7 +239,7 @@ main #sec02 .regsec02 {
 }
 
 main #sec02 .regsec02 .product {
-    flex-basis: calc((100% / 3) - (2rem / 3));
+    width: calc((100% / 3) - (2rem / 3));
     text-align: center;
 }
 
@@ -281,11 +297,12 @@ button:hover {
     align-items: center;
     margin-bottom: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #sec03 .box032 .item031 dl {
     display: flex;
-    flex-basis: 40%;
+    max-width: 450px;
     flex-direction: column;
     gap: 1rem;
     align-content: center;
@@ -297,7 +314,7 @@ button:hover {
 }
 
 #sec03 .box032 .item031 figure {
-    flex-basis: 40%;
+    max-width: 450px;
 }
 
 #sec03 .box032 .item031 figure img {
@@ -307,18 +324,13 @@ button:hover {
 
 /* /*****************************  sec04   *************************** */
 
-#sec04 {
-    max-width: 100%;
-}
 
-#sec04 .box040,
-.box041 {
-    max-width: 80%;
-    height: auto;
-    margin-inline: auto;
+
+#sec04 .box040, .form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
 
 #sec04 .box041 input[type="text"],
@@ -326,30 +338,32 @@ input[type="email"],
 textarea {
     border: 1px solid #696969;
     background-color: #ffffff;
-    width: 100%;
-    margin-top: 5px;
+    width: 50%;
     padding: 4px 8px;
 }
 
 #sec04 .box041 input[type="radio"] {
     width: 2rem;
     height: 2rem;
-    vertical-align: baseline;
+    vertical-align: middle;
     margin-right: 4px;
 }
 
 #sec04 .box041 textarea {
-    height: 130px;
+    height: auto;
+    width: 50%;
 }
 
 #sec04 .box041 form > p {
-    width: 800px;
+    max-width: 100%;
     line-height: 1.4;
-    margin-bottom: 20px;
+    vertical-align: middle;
+    margin-top: 2rem;
+    
 }
 
 #sec04 .box041 input[type="submit"] {
-    background-color: #696969;
+    background-color: rgb(255, 162, 162);
     color: #ffffff;
     padding: 18px 80px;
 }
@@ -375,8 +389,8 @@ footer {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 10000;
-    transition: all 1s linear;
+    z-index: 100;
+    transition: all 3s linear;
     /* ここから下はデザイン用 */
     background-color: #9eceff;
     display: flex;
@@ -419,8 +433,12 @@ footer {
 
 .swiper {
     margin-top: 2rem;
-    max-width: 1200px;
+    max-width: 1040px;
     height: auto;
+}
+
+.swiper-slide {
+    width: calc(100% / 3);
 }
 
 .swiper-slide img {
@@ -511,4 +529,51 @@ footer {
     header nav ul li {
         font-size: 1rem;
     }
+}
+
+
+@media screen and (max-width: 360px) {
+    body h1 {
+        font-size: 1.8rem;
+    }
+    
+    body h2 {
+        font-size: 1.3rem;
+    }
+    
+    body h3 {
+        font-size: 1rem;
+    }
+    body p{
+        font-size: 0.8rem;
+    }
+
+    main #sec02 .regsec02 {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+    
+    main #sec02 .regsec02 .product {
+        width: 60%;
+        text-align: center;
+    }
+
+    #sec03 .box032 .item031 {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #sec03 .box032 .item031 dt {
+        font-weight: bold; 
+        font-size: 1rem;
+
+    }
+
+    /* メディアクエリ修了　　 */
 }
